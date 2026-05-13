@@ -52,7 +52,7 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 -------------------------------------------------------------------------------
 hl.config({
     general = {
-        layout = "dwindle",
+        layout = "scrolling",
         
 	gaps_in  = 5,
         gaps_out = 20,
@@ -193,10 +193,16 @@ hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(browser))
---hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
+
+-- General layouts
+hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
+
+-- Scrolling layout
+hl.bind(mainMod .. " + K", hl.dsp.layout("consume_or_expel next"))
+hl.bind(mainMod .. " + J", hl.dsp.layout("consume_or_expel prev"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
