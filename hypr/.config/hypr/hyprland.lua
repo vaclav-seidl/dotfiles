@@ -295,6 +295,15 @@ hl.window_rule({
 -------------------------------------------------------------------------------
 -- Noctalia
 -------------------------------------------------------------------------------
--- TBD: There are some settings here: https://docs.noctalia.dev/v4/getting-started/compositor-settings/hyprland/
+hl.layer_rule({
+    name  = "noctalia",
+    match = {
+        namespace = "noctalia-background-.*$"
+    },
+
+    ignore_alpha = 0.5,
+    blur = true,
+    blur_popups = true,
+})
 
 
