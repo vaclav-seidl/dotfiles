@@ -1,0 +1,10 @@
+alias ls='eza --icons=never --group-directories-first'
+alias ll='eza -lah --icons=never --group-directories-first --git'
+alias tree='eza --tree --icons=auto'
+
+alias cat='bat --paging=never'
+
+alias vi='nvim'
+alias vim='nvim'
+
+alias top='btm'

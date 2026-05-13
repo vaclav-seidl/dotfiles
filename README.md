@@ -1,0 +1,1 @@
+Configuration via GNU stow
