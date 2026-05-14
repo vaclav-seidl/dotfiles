@@ -21,8 +21,9 @@ hl.monitor({
 -------------------------------------------------------------------------------
 local terminal      = "ghostty"
 local fileManager   = "ghostty -e yazi"
--- local menu          = "qs -c noctalia-shell ipc call launcher toggle"
-local menu          = "rofi -show drun"
+local menu          = "qs -c noctalia-shell ipc call launcher toggle"
+local emoji         = "rofi -modi emoji -show emoji"
+--local menu          = "rofi -show drun"
 local browser       = "firefox"
 local magnifier     = "woomer --monitor $(hyprctl -j monitors | jq -r '.[] | select(.focused == true) | .name')"
 
@@ -184,11 +185,14 @@ hl.config({
 
 -------------------------------------------------------------------------------
 -- Keybinding
+--
+-- Use `wev` to get the sym keys 
 -------------------------------------------------------------------------------
 
 local mainMod = "SUPER"
 
 hl.bind(mainMod .. " + grave", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(emoji))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
