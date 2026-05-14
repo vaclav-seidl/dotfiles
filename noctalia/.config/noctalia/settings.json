@@ -148,36 +148,6 @@
                     "textColor": "none",
                     "useMonospaceFont": true,
                     "usePadding": false
-                },
-                {
-                    "defaultSettings": {
-                        "barCycleIntervalSec": 5,
-                        "barDisplayMode": "active",
-                        "barMetric": "prompts",
-                        "providers": {
-                            "claude": {
-                                "credentialsPath": "~/.claude/.credentials.json",
-                                "enabled": false,
-                                "statsPath": "~/.claude/stats-cache.json"
-                            },
-                            "codex": {
-                                "enabled": false
-                            },
-                            "copilot": {
-                                "enabled": false
-                            },
-                            "openrouter": {
-                                "apiKey": "",
-                                "enabled": false
-                            },
-                            "zen": {
-                                "apiKey": "",
-                                "enabled": false
-                            }
-                        },
-                        "refreshIntervalSec": 30
-                    },
-                    "id": "plugin:model-usage"
                 }
             ],
             "right": [
@@ -192,46 +162,6 @@
                     "pinned": [
                         "toolbox"
                     ]
-                },
-                {
-                    "defaultSettings": {
-                        "precision": 8,
-                        "showBarValue": true
-                    },
-                    "id": "plugin:noctalia-calculator"
-                },
-                {
-                    "defaultSettings": {
-                        "colorHistory": [
-                        ],
-                        "detectedRecorder": "",
-                        "filenameFormat": "",
-                        "gifMaxSeconds": 30,
-                        "installedLangs": [
-                            "eng"
-                        ],
-                        "paletteColors": [
-                        ],
-                        "recordCopyToClipboard": false,
-                        "recordSkipConfirmation": false,
-                        "screenshotPath": "",
-                        "selectedOcrLang": "eng",
-                        "transAvailable": false,
-                        "videoPath": ""
-                    },
-                    "id": "plugin:screen-toolkit"
-                },
-                {
-                    "defaultSettings": {
-                        "autoMount": false,
-                        "fileBrowser": "yazi",
-                        "hideWhenEmpty": false,
-                        "iconColor": "none",
-                        "showBadge": false,
-                        "showNotifications": true,
-                        "terminalCommand": "kitty"
-                    },
-                    "id": "plugin:usb-drive-manager"
                 },
                 {
                     "displayMode": "onhover",
@@ -253,6 +183,21 @@
                     "id": "NotificationHistory",
                     "showUnreadBadge": true,
                     "unreadBadgeColor": "primary"
+                },
+                {
+                    "id": "plugin:usb-drive-manager"
+                },
+                {
+                    "id": "plugin:screen-toolkit"
+                },
+                {
+                    "id": "plugin:model-usage"
+                },
+                {
+                    "id": "plugin:currency-exchange"
+                },
+                {
+                    "id": "plugin:noctalia-calculator"
                 }
             ]
         }
