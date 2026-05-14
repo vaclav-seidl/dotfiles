@@ -164,6 +164,9 @@
                     ]
                 },
                 {
+                    "id": "plugin:model-usage"
+                },
+                {
                     "displayMode": "onhover",
                     "iconColor": "none",
                     "id": "Bluetooth",
@@ -189,9 +192,6 @@
                 },
                 {
                     "id": "plugin:screen-toolkit"
-                },
-                {
-                    "id": "plugin:model-usage"
                 },
                 {
                     "id": "plugin:currency-exchange"
