@@ -152,6 +152,8 @@ hl.config({
 hl.config({
     scrolling = {
         fullscreen_on_one_column = true,
+	follow_focus = true,
+	wrap_focus = true,
     },
 })
 
@@ -173,7 +175,7 @@ hl.config({
         kb_options = "",
         kb_rules   = "",
 
-        follow_mouse = 1,
+        follow_mouse = 0,
 
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
@@ -207,6 +209,8 @@ hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 -- Scrolling layout
 hl.bind(mainMod .. " + K", hl.dsp.layout("consume_or_expel next"))
 hl.bind(mainMod .. " + J", hl.dsp.layout("consume_or_expel prev"))
+hl.bind(mainMod .. " + L", hl.dsp.layout("fit active"))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.layout("promote"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
