@@ -1,6 +1,6 @@
 # Dotfiles
 
-![Screenshot](screenshots/Screenshot from 2026-05-16 00-32-04.png)
+![](https://github.com/vaclav-seidl/dotfiles/blob/main/screenshots/Screenshot%20from%202026-05-16%2000-32-04.png)
 
 ## Configuration
 
