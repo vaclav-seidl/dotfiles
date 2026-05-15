@@ -71,21 +71,37 @@ input {
 
 output "DP-1" {
     mode "3840x2160"
-    scale 1.0
+    scale 1.1
     transform "normal"
     position x=0 y=0
+    focus-at-startup
+    hot-corners {
+    	off
+    }
+    backdrop-color "#ffffff"
 }
 
 output "DP-2" {
     mode "1920x1080"
     scale 1.0
     transform "normal"
-    position x=1300 y=2160
+
+    // DP-1 scale factor has to be taken into account
+    // For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080
+    
+    position x=1182 y=1964
+    hot-corners {
+    	off
+    }
 }
 
 // Settings that influence how windows are positioned and sized.
 layout {
     gaps 16
+
+    // background-color "#303446" // Catppuccin Base
+    // background-color "#232634" // Catppuccin Crust
+    background-color "#292c3c" // Catppuccin Mantle
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -147,7 +163,7 @@ layout {
         //
         // The focus ring only draws around the active window, so the only place
         // where you can see its inactive-color is on other monitors.
-        // inactive-color "#505050"
+        inactive-color "#292c3c" // Catppucin Mantle (same as background)
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
@@ -156,13 +172,13 @@ layout {
         // You can use any CSS linear-gradient tool on the web to set these up.
         // Changing the color space is also supported, check the wiki for more info.
         //
-        active-gradient from="#80c8ff" to="#c7ff7f" angle=45
+        active-gradient from="#a6d189" to="#8caaee" angle=45
 
         // You can also color the gradient relative to the entire view
         // of the workspace, rather than relative to just the window itself.
         // To do that, set relative-to="workspace-view".
         //
-        inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
     // You can also add a border. It's similar to the focus ring, but always visible.
