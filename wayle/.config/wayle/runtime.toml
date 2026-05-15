@@ -1,0 +1,88 @@
+[general]
+tearing-mode = true
+
+[bar]
+inset-edge = 0.5
+inset-ends = 0.5
+padding = 0.0
+module-gap = 1.0
+bg = "transparent"
+rounding = "full"
+button-variant = "icon-square"
+button-rounding = "full"
+
+[[bar.layout]]
+monitor = "DP-2"
+show = true
+left = [
+    "cpu",
+    "ram",
+    "netstat",
+]
+center = [
+    "weather",
+    "clock",
+    "media",
+]
+right = [
+    "keyboard-input",
+    "volume",
+    "microphone",
+    "bluetooth",
+    "network",
+    "systray",
+    "notifications",
+    "dashboard",
+]
+
+[styling]
+scale = 1.0
+rounding = "lg"
+
+[styling.palette]
+bg = "#11111b"
+surface = "#181825"
+elevated = "#1e1e2e"
+fg = "#cdd6f4"
+fg-muted = "#bac2de"
+primary = "#b4befe"
+red = "#f38ba8"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+blue = "#74c7ec"
+
+[modules.clock]
+format = "   %A - %H:%M - %-d/%m   "
+icon-show = false
+icon-bg-color = "status-success"
+label-color = "status-success"
+dropdown-show-seconds = true
+
+[modules.dashboard]
+dropdown-lock-command = "swaylock"
+
+[modules.media]
+icon-bg-color = "border-accent"
+label-color = "border-accent"
+label-max-length = 25
+
+[modules.netstat]
+format = "{{ down_auto }} | {{ up_auto }}"
+border-color = "yellow"
+icon-bg-color = "yellow"
+label-color = "status-warning"
+
+[modules.notification]
+popup-position = "bottom-center"
+
+[modules.weather]
+location = "Brasov"
+
+[osd]
+position = "top"
+margin = 10.0
+
+[wallpaper]
+engine-enabled = false
+cycling-mode = "shuffle"
+cycling-same-image = true
