@@ -241,7 +241,7 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-spawn-at-startup "wayle shell"
+spawn-sh-at-startup "wayle shell"
 spawn-at-startup "clipse -listen"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
