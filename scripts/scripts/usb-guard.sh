@@ -2,7 +2,7 @@
 
 SINK="${1:-alsa_output.pci-0000_01_00.1.hdmi-stereo}"  # override: pactl list sinks short
 #SINK="${1:-bluez_output.94_DB_56_02_68_87.1}"  # override: pactl list sinks short
-VOLUME=100       # percent, 0–100
+VOLUME=150       # percent; 100 = normal, >100 = software boost
 ALARM_DURATION=30
 
 alarm() {
