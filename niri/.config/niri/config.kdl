@@ -78,7 +78,7 @@ output "DP-1" {
     hot-corners {
     	off
     }
-    backdrop-color "#ffffff"
+    backdrop-color "#232634" // Catppuccin Crust
 }
 
 output "DP-2" {
@@ -93,6 +93,7 @@ output "DP-2" {
     hot-corners {
     	off
     }
+    backdrop-color "#232634" // Catppuccin Crust
 }
 
 // Settings that influence how windows are positioned and sized.
