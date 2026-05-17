@@ -341,6 +341,7 @@ binds {
     Mod+B hotkey-overlay-title="Run a Browser: firefox" { spawn "firefox"; }
     Mod+Z hotkey-overlay-title="Run a Magnifier: woomer" { spawn-sh "~/scripts/woomer.sh"; }
     Mod+V hotkey-overlay-title="Run a Clipboard manager: " { spawn-sh "kitty --title=clipse -e clipse"; }
+    Mod+N hotkey-overlay-title="Search in notes" { spawn-sh "fd --type f -e md . $HOME/documents/notes | rofi -keep-right -dmenu -i -p Notes | xargs -I {} kitty -e nvim {}"; }
     Mod+Slash hotkey-overlay-title="Emoji picker" { spawn-sh "rofi -modi emoji -show emoji"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
