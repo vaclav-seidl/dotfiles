@@ -310,7 +310,6 @@ window-rule {
 
 window-rule {
     match title="^clipse$"
-    match is-floating=false
     open-floating true
 }
 
