@@ -336,7 +336,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Grave hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
-    Mod+Q hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+E hotkey-overlay-title="Open a File browser: yazi" { spawn-sh "kitty --title=yazi -e yazi"; }
     Mod+B hotkey-overlay-title="Run a Browser: firefox" { spawn "firefox"; }
     Mod+Z hotkey-overlay-title="Run a Magnifier: woomer" { spawn-sh "~/scripts/woomer.sh"; }
@@ -372,7 +372,7 @@ binds {
     // or do a four-finger swipe up on a touchpad.
     Mod+O repeat=false { toggle-overview; }
 
-    Mod+Escape repeat=false { close-window; }
+    Mod+Q repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
