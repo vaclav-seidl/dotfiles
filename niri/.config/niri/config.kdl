@@ -310,7 +310,14 @@ window-rule {
 
 window-rule {
     match title="^clipse$"
+    match is-floating=false
     open-floating true
+}
+
+// JetBrains IDEs
+window-rule {
+    match app-id="^jetbrains-"
+    open-on-output "DP-1"
 }
 
 // Enable rounded corners for all windows.
