@@ -1,0 +1,12 @@
+let mapleader="\<space>"
+
+set clipboard+=unnamed
+set highlightedyank
+
+set ideajoin
+set ideamarks
+set idearefactormode=normal
+
+nmap <leader>f <Action>(GotoFile)
+nnoremap <leader>gd <Action>(GotoDeclaration)
+
