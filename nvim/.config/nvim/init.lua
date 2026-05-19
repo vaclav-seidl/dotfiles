@@ -2,6 +2,12 @@
 require('config.lazy')
 require("lazy").setup("plugins")
 
+-- Theme
+require("catppuccin").setup({
+    flavour = "frappe", -- latte, frappe, macchiato, mocha
+})
+vim.cmd.colorscheme "catppuccin-nvim"
+
 -- LSP Servers
 vim.lsp.enable('rust_analyzer')
 

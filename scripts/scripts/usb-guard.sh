@@ -5,6 +5,13 @@ SINK="${1:-alsa_output.pci-0000_01_00.1.hdmi-stereo}"  # override: pactl list si
 VOLUME=150       # percent; 100 = normal, >100 = software boost
 ALARM_DURATION=30
 
+# Only alarm on these devices (prefix-matched against PRODUCT=vendor/product/rev).
+# Use "vendor/product" for a specific device or just "vendor" for all from that vendor.
+WATCH_PRODUCTS=(
+    "46d/8b6"   # Logitech mouse
+    "5ac/24f"   # Apple keyboard
+)
+
 alarm() {
     local name="$1"
     printf '\n!!! USB DEVICE REMOVED: %s — SOUNDING ALARM !!!\n\n' "$name"
@@ -25,7 +32,7 @@ alarm() {
     rm -f "$lo" "$hi"
 }
 
-echo "USB guardian active — alarming on ANY device removal."
+echo "USB guardian active — alarming on mouse/keyboard removal."
 echo "Press Ctrl+C to disarm."
 echo ""
 
@@ -40,8 +47,12 @@ while IFS= read -r line; do
         DEVNAME=*) devname="${line#DEVNAME=}" ;;
         "")
             if [[ "$action" == "remove" && "$devtype" == "usb_device" ]]; then
-                label="${devname:-${product}}"
-                alarm "$label" &
+                for pat in "${WATCH_PRODUCTS[@]}"; do
+                    if [[ "$product" == "$pat"* ]]; then
+                        alarm "${devname:-${product}}" &
+                        break
+                    fi
+                done
             fi
             action=""; devtype=""; product=""; devname=""
             ;;

@@ -10,3 +10,4 @@ alias vim='nvim'
 alias top='btm'
 
 alias lg='lazygit'
+alias fd='fd -L'
