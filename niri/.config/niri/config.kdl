@@ -317,6 +317,8 @@ window-rule {
 window-rule {
     match app-id="^jetbrains-"
     open-on-output "DP-1"
+    open-maximized false
+    open-maximized-to-edges false
 }
 
 // Enable rounded corners for all windows.
