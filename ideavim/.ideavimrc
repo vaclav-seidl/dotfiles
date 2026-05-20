@@ -1,12 +1,43 @@
 let mapleader="\<space>"
 
 set clipboard+=unnamed
+set clipboard+=ideaput
+
 set highlightedyank
 
 set ideajoin
 set ideamarks
-set idearefactormode=normal
+set idearefactormode=keep
+set ideawrite=all
 
-nmap <leader>f <Action>(GotoFile)
-nnoremap <leader>gd <Action>(GotoDeclaration)
+" Which key - Good for learning but annoying to use
+set which-key
+set notimeout " For which-key, so the popup stays open
 
+nmap <leader>ff <Action>(GotoFile)
+nmap <leader>fg <Action>(FindInPath)
+nmap <leader>fs <Action>(GotoSymbol)
+nmap <leader>fa <Action>(GotoAction)
+nmap <leader>fc <Action>(GotoClass)
+nmap <leader>fr <Action>(RecentFiles)
+nmap <leader>fl <Action>(RecentLocations)
+
+nmap <leader>gg <Action>(ShowHoverInfo)
+nmap <leader>gu <Action>(FindUsages)
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gh <Action>(CallHierarchy)
+nmap <leader>gi <Action>(GotoImplementation)
+
+nmap <leader>r <Action>(Refactorings.QuickListPopupAction)
+
+" Multicursor (using breton-leighton/multiple-cursors.nvim bindings)
+nmap <C-j> <Action>(EditorCloneCaretBelow)
+xmap <C-j> <Action>(EditorCloneCaretBelow)
+nmap <C-k> <Action>(EditorCloneCaretAbove)
+xmap <C-k> <Action>(EditorCloneCaretAbove)
+nmap <C-Down> <Action>(EditorCloneCaretBelow)
+imap <C-Down> <Action>(EditorCloneCaretBelow)
+xmap <C-Down> <Action>(EditorCloneCaretBelow)
+nmap <C-Up> <Action>(EditorCloneCaretAbove)
+imap <C-Up> <Action>(EditorCloneCaretAbove)
+xmap <C-Up> <Action>(EditorCloneCaretAbove)
