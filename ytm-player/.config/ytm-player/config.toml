@@ -1,0 +1,77 @@
+[general]
+startup_page = "library"
+playback_bar_position = "bottom"
+brand_account_id = ""
+check_for_updates = false
+
+[playback]
+audio_quality = "high"
+autoplay = true
+prefer_audio = true
+default_volume = 100 
+seek_step = 5
+gapless = true
+api_timeout = 15
+resume_on_launch = true
+
+[yt_dlp]
+cookies_file = ""
+remote_components = ""
+js_runtimes = ""
+
+[search]
+default_mode = "music"
+max_history = 500
+predictive = true
+
+[cache]
+enabled = true
+max_size_mb = 10240
+prefetch_next = true
+location = ""
+
+[ui]
+theme = "catppuccin-frappe"
+album_art = true
+border_style = "rounded"
+progress_style = "block"
+sidebar_width = 40
+col_index = 4
+col_title = 0
+col_artist = 0
+col_album = 0
+col_duration = 8
+bidi_mode = "auto"
+show_selection_info = true
+home_shelves = 3
+region = "ZZ"
+sidebar_overflow = "truncate"
+show_queue_source = true
+
+[notifications]
+enabled = false
+timeout_seconds = 5
+format = "{title} — {artist}"
+
+[mpris]
+enabled = true
+
+[lyrics]
+transliteration = false
+
+[discord]
+enabled = false
+
+[lastfm]
+enabled = false
+api_key = ""
+api_secret = ""
+session_key = ""
+username = ""
+password_hash = ""
+
+[logging]
+level = "ERROR"
+max_bytes = 5242880
+backup_count = 3
+keep_crashes = 10
