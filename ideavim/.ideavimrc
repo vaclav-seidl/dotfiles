@@ -28,6 +28,10 @@ nmap <leader>gd <Action>(GotoDeclaration)
 nmap <leader>gh <Action>(CallHierarchy)
 nmap <leader>gi <Action>(GotoImplementation)
 
+nmap <leader>cc <Action>(Run)
+nmap <leader>cb <Action>(Build)
+nmap <leader>cd <Action>(Debug)
+
 nmap <leader>r <Action>(Refactorings.QuickListPopupAction)
 
 " Multicursor (using breton-leighton/multiple-cursors.nvim bindings)
